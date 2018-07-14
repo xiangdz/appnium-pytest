@@ -1,0 +1,36 @@
+[2018-07-14 15:59:31.197721] INFO: jiekou: 当前模块 requests封装
+[2018-07-14 15:59:31.201721] INFO: jiekou: 全部args参数参数信息 , ()
+[2018-07-14 15:59:31.203721] INFO: jiekou: 全部kwargs参数信息 , {}
+[2018-07-14 15:59:31.351730] INFO: jiekou: 当前模块 生成数据驱动所用数据
+[2018-07-14 15:59:31.353730] INFO: jiekou: 全部args参数参数信息 , ()
+[2018-07-14 15:59:31.357730] INFO: jiekou: 全部kwargs参数信息 , {}
+[2018-07-14 15:59:31.359730] INFO: jiekou: 当前模块 解析测试用例文件
+[2018-07-14 15:59:31.361730] INFO: jiekou: 全部args参数参数信息 , ('E:\\jiekou-python3\\test_case_data\\case.xlsx',)
+[2018-07-14 15:59:31.363730] INFO: jiekou: 全部kwargs参数信息 , {}
+[2018-07-14 15:59:31.395732] INFO: jiekou: 测试用例开始执行
+[2018-07-14 15:59:31.398732] INFO: jiekou: 输入参数：url:http://www.tuling123.com/openapi/api,key:aaaa,参数:{'password':'1222'},请求方式：POST
+[2018-07-14 15:59:31.401732] INFO: jiekou: 输入参数：url:http://www.tuling123.com/openapi/api,key:aaaa,参数:{'password':'1222'},请求方式：None
+[2018-07-14 15:59:31.601744] INFO: jiekou: 返回结果:{'code': 0, 'result': {'code': 40007, 'text': '您的请求内容为空。'}}
+[2018-07-14 15:59:31.604744] INFO: jiekou: 当前模块 断言测试结果
+[2018-07-14 15:59:31.607744] INFO: jiekou: 全部args参数参数信息 , ()
+[2018-07-14 15:59:31.610744] INFO: jiekou: 全部kwargs参数信息 , {'asserqingwang': 'code=40001'}
+[2018-07-14 15:59:31.616745] INFO: jiekou: 测试用例执行完毕
+[2018-07-14 15:59:31.621745] INFO: jiekou: 测试用例开始执行
+[2018-07-14 15:59:31.625745] INFO: jiekou: 输入参数：url:http://www.tuling123.com/openapi/api
+,key:dfeb1cc8125943d29764a2f2f5c33739,参数:{'password':'1222'},请求方式：POST
+[2018-07-14 15:59:31.628745] INFO: jiekou: 输入参数：url:http://www.tuling123.com/openapi/api
+,key:dfeb1cc8125943d29764a2f2f5c33739,参数:{'password':'1222'},请求方式：None
+[2018-07-14 15:59:31.743752] INFO: jiekou: 返回结果:{'code': 0, 'result': {'code': 40007, 'text': '您的请求内容为空。'}}
+[2018-07-14 15:59:31.748752] INFO: jiekou: 当前模块 断言测试结果
+[2018-07-14 15:59:31.750752] INFO: jiekou: 全部args参数参数信息 , ()
+[2018-07-14 15:59:31.755753] INFO: jiekou: 全部kwargs参数信息 , {'asserqingwang': 'code=40002'}
+[2018-07-14 15:59:31.759753] INFO: jiekou: 测试用例执行完毕
+[2018-07-14 15:59:31.764753] INFO: jiekou: 测试用例开始执行
+[2018-07-14 15:59:31.767753] INFO: jiekou: 输入参数：url:https://api.douban.com/v2/photo/:id,key:dfeb1cc8125943d29764a2f2f5c33739,参数:{'password':'1222'},请求方式：GET
+[2018-07-14 15:59:31.770754] INFO: jiekou: 输入参数：url:https://api.douban.com/v2/photo/:id,key:dfeb1cc8125943d29764a2f2f5c33739,参数:{'password':'1222'},请求方式：None
+[2018-07-14 15:59:34.486909] INFO: jiekou: 返回结果:{'code': 0, 'result': {'msg': 'uri_not_found', 'code': 1001, 'request': 'GET /v2/photo/:id'}}
+[2018-07-14 15:59:34.489909] INFO: jiekou: 当前模块 断言测试结果
+[2018-07-14 15:59:34.493909] INFO: jiekou: 全部args参数参数信息 , ()
+[2018-07-14 15:59:34.497910] INFO: jiekou: 全部kwargs参数信息 , {'asserqingwang': ''}
+[2018-07-14 15:59:34.500910] INFO: jiekou: 填写测试预期值
+[2018-07-14 15:59:34.503910] INFO: jiekou: 测试用例执行完毕

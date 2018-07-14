@@ -17,9 +17,22 @@ class MyTest(unittest.TestCase):
         LOG.info('测试用例执行完毕')
     @ddt.data(*data_test)
     def test_api(self,data_test):
-        api = TestApi(url=data_test['url'], key=data_test['key'], connent=data_test['coneent'], fangshi=data_test['fangshi'])
-        LOG.info('输入参数：url:%s,key:%s,参数:%s,请求方式：%s'%(data_test['url'],data_test['key'],data_test['coneent'],        LOG.info('输入参数：url:%s,key:%s,参数:%s,请求方式：%s'%(data_test['url'],data_test['key'],data_test['coneent'],data_test['fangshi']))))
+        api = TestApi(url=data_test['url'], key=data_test['key'],
+                      connent=data_test['coneent'], fangshi=data_test['fangshi'])
+        LOG.info('输入参数：url:%s,key:%s,参数:%s,请求方式：%s'
+                 %(data_test['url'],data_test['key'],data_test['coneent'],data_test['fangshi']))
+        print(api.connent)
+        # print(api.response)
         apijson = api.getJson()
         LOG.info('返回结果:%s'%apijson)
+
+
+
+        print(data_test['qiwang'])
+
         qingwang=assertre(asserqingwang=data_test['qiwang'])
-        self.assertNotEqual(dict(qingwang),dict(apijson),msg='预期和返回不一致')
+
+
+        # zjij
+        # self.assertNotEqual(dict(qingwang),dict(apijson),msg='预期和返回不一致')
+        self.assertNotEqual(qingwang,apijson,msg='预期和返回不一致')
