@@ -9,9 +9,20 @@ def start_dubbo_case():
     starttime=datetime.datetime.now()
     day= time.strftime("%Y%m%d%H%M", time.localtime(time.time()))
     basdir=os.path.abspath(os.path.dirname(__file__))
-    path = os.getcwd() + '\\test_case_data\\dubbocase.xlsx'
+    print(basdir)
+    # path = os.getcwd() + '\\test_case_data\\dubbocase.xlsx'
+    path = 'F:\\jiekoupython30\\test_case_data\\dubbocase.xlsx'
+
+    print(datacel(path))
+
     listid, listkey, listconeent, listurl, listfangshi, listqiwang, listname = datacel(path)
-    listrelust, list_fail, list_pass, list_json,list_exption,list_weizhi = testdubbointerface()
+    aaaa=testdubbointerface()
+    print(aaaa)
+    # print(listrelust, list_fail, list_pass, list_json, list_exption, list_weizhi)
+
+    # listrelust,list_fail,list_pass,list_json,list_exption,list_weizhi = testdubbointerface()
+    listrelust,list_fail,list_pass,list_json,list_exption,list_weizhi = testdubbointerface()
+
     filepath =os.path.join(basdir+'\\test_Report\\%s-result.html'%day)
     if os.path.exists(filepath) is False:
         os.system(r'touch %s' % filepath)

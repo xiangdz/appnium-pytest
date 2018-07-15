@@ -8,7 +8,7 @@ from  Public.get_excel import datacel
 from  Public.log import LOG,logger
 import os
 # path=os.getcwd()+'\\test_case_data\\case.xlsx'
-path = 'E:\\jiekou-python3\\test_case_data\\case.xlsx'
+path = 'F:\\jiekoupython30\\test_case_data\\case.xlsx'
 listid,listkey,listconeent,listurl,listfangshi,listqiwang,listname=datacel(path)
 from Public.panduan import assert_in
 @logger('测试')
