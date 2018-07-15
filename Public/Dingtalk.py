@@ -3,7 +3,7 @@
 @file: Dingtalk.py 
 @time: 2017/12/26 17:34 
 """
-'''封装钉钉群发消息'''
+'''封装钉钉群发消息fffff'''
 import  requests,json
 from  config.config_dingding import Dingtalk_access_token
 def send_ding(content):
