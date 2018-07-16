@@ -7,8 +7,8 @@ from Public.get_excel import datacel
 from Public.Dingtalk import send_ding
 from config import path
 def start_dubbo_case():
-    starttime=datetime.datetime.now()
-    day= time.strftime("%Y%m%d%H%M", time.localtime(time.time()))
+    # starttime=datetime.datetime.now()
+    # day= time.strftime("%Y%m%d%H%M", time.localtime(time.time()))
 
 
 

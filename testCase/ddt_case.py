@@ -1,5 +1,5 @@
 """
-@author: lileilei
+@author:
 @file: dubbocase.py
 @time: 2018/3/29 12:47
 """
@@ -8,31 +8,40 @@ from  Public.get_excel import makedata
 from  Public.log import LOG
 from Public.panduan import assertre
 import ddt,unittest
-data_test=makedata()
+dataall=makedata()
+# @ddt.ddt
 @ddt.ddt
 class MyTest(unittest.TestCase):
     def setUp(self):
         LOG.info('测试用例开始执行')
     def tearDown(self):
         LOG.info('测试用例执行完毕')
-    @ddt.data(*data_test)
-    def test_api(self,data_test):
-        api = TestApi(url=data_test['url'], key=data_test['key'],
-                      connent=data_test['coneent'], fangshi=data_test['fangshi'])
-        LOG.info('输入参数：url:%s,key:%s,参数:%s,请求方式：%s'
-                 %(data_test['url'],data_test['key'],data_test['coneent'],data_test['fangshi']))
+    @ddt.data(*dataall)
+    def test_api(self,dataall):
+        url = dataall['url']
+        key = dataall['key']
+        canshu = dataall['coneent']
+        fangshi = dataall['fangshi']
+
+        api = TestApi(url, key, canshu, fangshi)
+
+        LOG.info('url:%s,key:%s,canshu:%s,postorget:%s'%(url,key,canshu,fangshi))
         print(api.connent)
-        # print(api.response)
+
         apijson = api.getJson()
         LOG.info('返回结果:%s'%apijson)
 
-
-
-        print(data_test['qiwang'])
-
-        qingwang=assertre(asserqingwang=data_test['qiwang'])
+        qingwang=assertre(asserqingwang=dataall['qiwang'])
 
 
         # zjij
         # self.assertNotEqual(dict(qingwang),dict(apijson),msg='预期和返回不一致')
         self.assertNotEqual(qingwang,apijson,msg='预期和返回不一致')
+if __name__ == '__main__':
+
+
+    suite = unittest.TestSuite()
+    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(MyTest))
+    suite.run()
+
+

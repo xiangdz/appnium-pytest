@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2017/6/4 20:15
-# @Author  : lileilei
+# @Author  :
 # @File    : case.py
 from Interface.testFengzhuang import TestApi
 from  Public.get_excel import datacel
@@ -11,8 +11,9 @@ from config import path
 
 listid,listkey,listconeent,listurl,listfangshi,listqiwang,listname=datacel(path.casedatapath)
 from Public.panduan import assert_in
-@logger('测试')
+@logger('测试cxq')
 def testinterface():
+    datacel(path.casedatapath)
     list_pass = 0
     list_fail = 0
     list_json = []
@@ -23,7 +24,7 @@ def testinterface():
         api=TestApi(url=listurl[i],key=listkey[i],connent=listconeent[i],fangshi=listfangshi[i])
         apijson=api.getJson()
         if apijson['code']==0:
-            LOG.info('inputdata> 参数:%s, url:%s ,返回:%s,预期:%s'%(listconeent[i],listurl[i],apijson,listqiwang[i]))
+            LOG.info('参数:%s, url:%s ,返回:%s,预期:%s'%(listconeent[i],listurl[i],apijson,listqiwang[i]))
             assert_re=assert_in(asserqiwang=listqiwang[i],fanhuijson=apijson)
             if assert_re['code']==0:
                 list_json.append(apijson['result'])
@@ -47,3 +48,6 @@ def testinterface():
             list_json.append(apijson['result'])
             continue
     return  listrelust,list_fail,list_pass,list_json,list_exption,list_weizhi
+
+if __name__ == '__main__':
+ testinterface()

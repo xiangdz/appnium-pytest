@@ -5,21 +5,23 @@ from testCase.case import testinterface
 from Public.py_Html import createHtml
 from Public.get_excel import datacel
 from config import path
+from config import time
+
 from  Public.Dingtalk import send_ding
 def start_interface_html_http():
-    starttime=datetime.datetime.now()
-    day= time.strftime("%Y%m%d%H%M", time.localtime(time.time()))
+    starttime=time.ctimecuo
 
 
     listid, listkey, listconeent, listurl, listfangshi, listqiwang, listname = datacel(path.casedatapath)
     listrelust, list_fail, list_pass, list_json,list_exption,list_weizhi = testinterface()
-    filepath =os.path.join(path.reportpath,"%s-result.html"%day)
+    filepath =os.path.join(path.reportpath,"%s-result.html"%(time.ctime))
 
 
     if os.path.exists(filepath) is False:
         os.system(r'touch %s' % filepath)
-    endtime=datetime.datetime.now()
-    createHtml(titles=u'http接口自动化测试报告',filepath=filepath,starttime=starttime,
+    endtime=time.ctimecuo
+    createHtml(titles=u'http接口自动化测试报告',filepath=filepath,
+               starttime=starttime,
                endtime=endtime,passge=list_pass,fail=list_fail,
                id=listid,name=listname,key=listkey,coneent=listconeent,url=listurl,meth=listfangshi,
                yuqi=listqiwang,json=list_json,relusts=listrelust,weizhi=list_weizhi,exceptions=list_exption)
