@@ -1,7 +1,8 @@
-""" 
-@author: lileilei
-@file: Dingtalk.py 
-@time: 2017/12/26 17:34 
+# encoding: utf-8
+"""
+@author: cxq
+@file: create_report.py
+@time: 2018/7/16 12:27
 """
 '''封装钉钉群发消息f'''
 import  requests,json

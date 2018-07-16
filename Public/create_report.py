@@ -1,8 +1,8 @@
 # encoding: utf-8
 """
-@author: lileilei
+@author: cxq
 @file: create_report.py
-@time: 2017/8/3 12:27
+@time: 2018/7/16 12:27
 """
 from Public.log import LOG,logger
 @logger('保存测试结果')

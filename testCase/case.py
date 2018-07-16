@@ -4,12 +4,12 @@
 # @File    : case.py
 from Interface.testFengzhuang import TestApi
 from  Public.get_excel import datacel
-# from  Public.get_excel_new import datacel
+
 from  Public.log import LOG,logger
-import os
-# path=os.getcwd()+'\\test_case_data\\case.xlsx'
-path = 'F:\\jiekoupython30\\test_case_data\\case.xlsx'
-listid,listkey,listconeent,listurl,listfangshi,listqiwang,listname=datacel(path)
+from config import path
+
+
+listid,listkey,listconeent,listurl,listfangshi,listqiwang,listname=datacel(path.casedatapath)
 from Public.panduan import assert_in
 @logger('测试')
 def testinterface():

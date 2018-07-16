@@ -14,7 +14,7 @@ def start_interface_html_http():
     listid, listkey, listconeent, listurl, listfangshi, listqiwang, listname = datacel(path.casedatapath)
     listrelust, list_fail, list_pass, list_json,list_exption,list_weizhi = testinterface()
     filepath =os.path.join(path.reportpath,"%s-result.html"%day)
-  
+
 
     if os.path.exists(filepath) is False:
         os.system(r'touch %s' % filepath)

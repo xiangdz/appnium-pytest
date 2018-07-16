@@ -7,9 +7,8 @@ from Interface.dubbo_feng import DubboInterface
 from Public.log import LOG,logger
 from Public.panduan import assert_in
 from  Public.get_excel import datacel
-import os
-# path=os.getcwd()+'\\test_case_data\\dubbocase.xlsx'
-print(os.getcwd())
+from config import path
+
 
 
 
@@ -22,9 +21,8 @@ def testdubbointerface():
     listrelust = []
     list_weizhi = 0
     list_exption = 0
-    path = 'F:\\jiekoupython30\\test_case_data\\dubbocase.xlsx'
 
-    listid,listurl,listinterface,listmeth,listfobject,listparam,listassert=datacel(path)
+    listid,listurl,listinterface,listmeth,listfobject,listparam,listassert=datacel(path.dubbocasedatapath)
 
     for i in range(len(listid)):
         dubboapi=DubboInterface(url=listurl[i],interface=listinterface[i],method=listmeth[i],param=listfobject[i],**(eval(listparam[i])))

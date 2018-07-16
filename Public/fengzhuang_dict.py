@@ -1,7 +1,8 @@
-""" 
-@author: lileilei
-@file: python_dict.py 
-@time: 2018/6/15 13:54 
+# encoding: utf-8
+"""
+@author: cxq
+@file: create_report.py
+@time: 2018/7/16 12:27
 """
 dictone={'control': {'expires': 1800},
          'status': 0, 'data': {'hasNext': 1,
