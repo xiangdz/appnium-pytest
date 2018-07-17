@@ -47,11 +47,11 @@ def yangshique(me):
          style.pattern = Pattern
     return style
 
-def create(filename,list_pass,list_fail,listids,listnames,listkeys,listconeents,listurls,listfangshis,listqiwangs,list_json,listrelust):
+def create(filename,passs,fails,ids,names,keys,coneents,urls,fangshis,qiwangs,jsons,relusts):
     style3 = yangshi3()
     style2 = yangshi2()
     style1 = yangshi1()
-    filepath = open(path.reportconfigpath, encoding='utf-8')
+    filepath = open(path.reportyamlpath, encoding='utf-8')
     file_config = yaml.load(filepath)
 
     file = Workbook(filename)
@@ -81,10 +81,10 @@ def create(filename,list_pass,list_fail,listids,listnames,listkeys,listconeents,
     table.write(4, 3, file_config['ceshi_person'],style2)
     table.write(5, 3, file_config['ceshi_time'],style2)
     table.write(6, 3, file_config['shenhename'],style2)
-    table.write(4, 5, (list_pass), style2)
-    table.write(5, 5, (list_fail), style2)
+    table.write(4, 5, (passs), style2)
+    table.write(5, 5, (fails), style2)
 
-    table.write(6, 5, ('%.2f%%'%((list_pass)/(len(listrelust)))),style2)
+    table.write(6, 5, ('%.2f%%'%((passs)/(len(relusts)))),style2)
 
     table1 = file.add_sheet('测试详情',cell_overwrite_ok=True)
 
@@ -101,17 +101,17 @@ def create(filename,list_pass,list_fail,listids,listnames,listkeys,listconeents,
         table1.write(1,6,'预期',style3)
         table1.write(1,7,'实际返回',style3)
         table1.write(1,8,'结果',style3)
-    for i in range(len(listids)):
-        table1.write(i+2, 0, listids[i],style3)
-        table1.write(i+2, 1, listnames[i],style3)
-        table1.write(i+2, 2, listkeys[i],style3)
-        table1.write(i+2, 3, listconeents[i],style3)
-        table1.write(i+2, 4, listurls[i],style3)
-        table1.write(i+2, 5, listfangshis[i],style3)
-        table1.write(i+2, 6, listqiwangs[i],style3)
-        table1.write(i+2, 7, str(list_json[i]),style3)
-        table1.write(i+2, 8, listrelust[i], style=yangshique(listrelust[i]))
+    for i in range(len(ids)):
+        table1.write(i+2, 0, ids[i],style3)
+        table1.write(i+2, 1, names[i],style3)
+        table1.write(i+2, 2, keys[i],style3)
+        table1.write(i+2, 3, coneents[i],style3)
+        table1.write(i+2, 4, urls[i],style3)
+        table1.write(i+2, 5, fangshis[i],style3)
+        table1.write(i+2, 6, qiwangs[i],style3)
+        table1.write(i+2, 7, str(jsons[i]),style3)
+        table1.write(i+2, 8, relusts[i], style=yangshique(relusts[i]))
     file.save(filename)
 
-    print(len(listids))
+    print(len(ids))
     print(i)

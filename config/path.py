@@ -1,36 +1,53 @@
-from configparser import  ConfigParser
 
 import os
+from config import time
 
 
-# configpath=os.path.dirname(__file__)
+configdir=os.path.abspath(os.path.dirname(__file__))
 
-configj=os.path.abspath(os.path.dirname(__file__))
+print(configdir)
 
-print(configj)
-# configpath=os.path.dirname(__file__)
-# print(configpath)
-gendir=os.path.dirname(configj)
+gendir=os.path.dirname(configdir)
 
-# gendir=os.path.join(configpathj,os.path.pardir)
 
 print(gendir)
 
-imgpath=os.path.join(gendir,"img")
-print(imgpath)
+imgdir=os.path.join(gendir,"img")
+print(imgdir)
 
-interfacepath=os.path.join(gendir,"Interface")
-logpath=os.path.join(gendir,"log")
-publicpath=os.path.join(gendir,"Public")
-datapath=os.path.join(gendir,"test_case_data")
-casedatapath=os.path.join(datapath,"case.xlsx")
-dubbocasedatapath=os.path.join(datapath,"dubbocase.xlsx")
+interfacedir=os.path.join(gendir,"Interface")
+logdir=os.path.join(gendir,"log")
+name="x"
 
+logpath=os.path.join(logdir, '%s.log' % name)
 
-reportpath=os.path.join(gendir,"test_Report")
-casepath=os.path.join(gendir,"testCase")
-configpath=os.path.join(configj,"config.ini")
-reportconfigpath=os.path.join(configj,"test_report.yaml")
+publicdir=os.path.join(gendir,"Public")
+datadir=os.path.join(gendir,"test_case_data")
+casedatapath=os.path.join(datadir,"case.xlsx")
+dubbocasedatapath=os.path.join(datadir,"dubbocase.xlsx")
 
 
-print(configpath)
+
+# baogao
+reportdir=os.path.join(gendir,"test_Report")
+
+reporthtmlpath = os.path.join(reportdir, (time.ctime + '.html'))
+
+casedir=os.path.join(gendir,"testCase")
+configinipath=os.path.join(configdir,"config.ini")
+reportyamlpath=os.path.join(configdir,"test_report.yaml")
+reportxlspath = os.path.join(reportdir, '%s-report.xls' % time.ctime)
+reporthtml2path = os.path.join(reportdir + '%s-result.html' %time.ctime)
+
+
+
+
+
+
+
+
+
+
+
+
+

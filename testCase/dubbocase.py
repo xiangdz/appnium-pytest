@@ -9,10 +9,6 @@ from Public.panduan import assert_in
 from  Public.get_excel import datacel
 from config import path
 
-
-
-
-
 @logger('dubbo接口测试')
 def testdubbointerface():
     list_pass = 0
@@ -26,9 +22,6 @@ def testdubbointerface():
 
     for i in range(len(listid)):
         dubboapi=DubboInterface(url=listurl[i],interface=listinterface[i],method=listmeth[i],param=listfobject[i],**(eval(listparam[i])))
-        # dubboapi=DubboInterface(url=listurl,interface=listinterface[i],method=listmeth[i],param=listfobject[i],**(exec(listparam[i])))
-        # dubboapi=DubboInterface(url=listurl,interface=listinterface[i],method=listmeth[i],param=listfobject[i],cc=(eval(listparam[i])))
-        # dubboapi=DubboInterface(url=listurl,interface=listinterface[i],method=listmeth[i],param=listfobject[i],cc=listparam[i])
         dubboapireslu=dubboapi.getresult()
         if dubboapireslu['code'] == 0:
             LOG.info('inputdata> 参数:%s, url:%s ,返回:%s,预期:%s' % (listparam[i], listurl[i], dubboapireslu, listassert[i]))
@@ -54,8 +47,7 @@ def testdubbointerface():
             listrelust.append('exception')
             list_json.append(dubboapireslu['result'])
             continue
-    # print(listrelust)
-    # print(list_fail)
+
     return listrelust, list_fail, list_pass, list_json, list_exption, list_weizhi
 # if __name__ == '__main__':
 #     testdubbointerface()

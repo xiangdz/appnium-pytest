@@ -1,31 +1,34 @@
 # -*- coding: utf-8 -*-
 # @Date    : 2017-08-02 21:54:08
-# @Author  : lileilei
+# @Author  :
 from Public.fengzhuang_dict import res
-from .log import LOG,logger
-@logger('断言测试结果')
-def assert_in(asserqiwang,fanhuijson):
-    if len(asserqiwang.split('=')) > 1:
-        data = asserqiwang.split('&')
+from  Public.log import LOG,logger
+@logger('测试结果断言1')
+def assert_in(qiwangjson,resjson):
+    if len(qiwangjson.split('=')) > 1:
+        data = qiwangjson.split('&')
         result = dict([(item.split('=')) for item in data])
-        value1=([(str(res(fanhuijson,key))) for key in result.keys()])
+        value1=([(str(res(resjson,key))) for key in result.keys()])
         value2=([(str(value)) for value in result.values()])
         if value1==value2:
             return  { 'code':0,"result":'pass'}
         else:
             return {'code':1,'result':'fail'}
     else:
-        LOG.info('填写测试预期值')
-        return  {"code":2,'result':'填写测试预期值'}
-@logger('断言测试结果')
-def assertre(asserqingwang):
-    if len(asserqingwang.split('=')) > 1:
-        data = asserqingwang.split('&')
+        LOG.info('测试预期值1')
+        return  {"code":2,'result':'测试预期值返回1'}
+@logger('测试结果断言2')
+def assertre(qiwangjson):
+    if len(qiwangjson.split('=')) > 1:
+        data = qiwangjson.split('&')
         result = dict([(item.split('=')) for item in data])
         return result
     else:
-        LOG.info('填写测试预期值')
+        LOG.info('测试预期值2')
         try:
-           raise {"code":1,'result':'填写测试预期值'}
+           raise {"code":1,'result':'测试预期值2'}
         except:
-           return "aa"
+           return "测试预期值返回2"
+
+
+# if __name__ == '__main__':

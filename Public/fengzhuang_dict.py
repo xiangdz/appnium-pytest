@@ -4,9 +4,6 @@
 @file: create_report.py
 @time: 2018/7/16 12:27
 """
-dictone={'control': {'expires': 1800},
-         'status': 0, 'data': {'hasNext': 1,
-                               'movies': [{'showInfo': '今天205家影院放映5078场'}]}}
 def res(d,code):
     result=[]
     if isinstance(d, dict) and code in d.keys():
@@ -35,3 +32,9 @@ def res(d,code):
                     for item in value:
                         result.append(item)
             return result
+# if __name__ == '__main__':
+#     dictone = {'control': {'expires': 1800},
+#                'status': 0, 'data': {'hasNext': 1,
+#                                      'movies': [{'showInfo': '今天205家影院放映5078场'}]}}
+#     re =res(dictone, dictone['data'])
+#     print(re)
