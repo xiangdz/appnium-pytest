@@ -2,8 +2,10 @@
 # @Date    : 2017-08-02 21:54:08
 # @Author  :
 from Public.fengzhuang_dict import res
-from  Public.log import LOG,logger
-@logger('测试结果断言1')
+
+from Public.log import run_log as logger
+
+logger.info('测试结果断言1')
 def assert_in(qiwangjson,resjson):
     if len(qiwangjson.split('=')) > 1:
         data = qiwangjson.split('&')
@@ -15,16 +17,16 @@ def assert_in(qiwangjson,resjson):
         else:
             return {'code':1,'result':'fail'}
     else:
-        LOG.info('测试预期值1')
+        logger.info('测试预期值1')
         return  {"code":2,'result':'测试预期值返回1'}
-@logger('测试结果断言2')
+logger.info('测试结果断言2')
 def assertre(qiwangjson):
     if len(qiwangjson.split('=')) > 1:
         data = qiwangjson.split('&')
         result = dict([(item.split('=')) for item in data])
         return result
     else:
-        LOG.info('测试预期值2')
+        logger.info('测试预期值2')
         try:
            raise {"code":1,'result':'测试预期值2'}
         except:

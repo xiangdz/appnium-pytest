@@ -9,11 +9,11 @@ from config import path
 from  Public.pyreport_excel import create
 import os
 from testCase.case import testinterface
-from  Public.get_excel import datacel
+from  Public.get_excel import makedata
 
 def start_excel_report_http():
 
-    ids, keys, contens, fangshis, names, qiwangs,urls=datacel(path.casedatapath)
+    ids, keys, contens, fangshis, names, qiwangs,urls=makedata(path.casedatapath)
 
     relusts, fails, passs, jsons, exptions, weizhis =testinterface()
 

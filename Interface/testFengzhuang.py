@@ -4,11 +4,11 @@
 # @Site    :
 # @File    : testFengzhuang.py
 from Public.test_requests import jiekou
-from Public.log import logger
+
+from   Public.log import run_log as logger
 
 
-
-@logger("调用接口去实例化")
+logger.info("调用接口去实例化")
 class TestApi(object):
 	def __init__(self,url,key,connent,fangshi):
 		self.url=url

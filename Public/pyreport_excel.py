@@ -112,6 +112,3 @@ def create(filename,passs,fails,ids,names,keys,coneents,urls,fangshis,qiwangs,js
         table1.write(i+2, 7, str(jsons[i]),style3)
         table1.write(i+2, 8, relusts[i], style=yangshique(relusts[i]))
     file.save(filename)
-
-    print(len(ids))
-    print(i)

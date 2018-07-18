@@ -97,7 +97,8 @@ def ceshixiangqing(reslt,id,name,key,coneent,url,meth,yuqi,json,relust):
             <td>%s</td>
             <td>%s</td>
             <td>%s</td>
-            %s
+                 %s 
+        
         </tr>
     '''%(reslt,id,name,key,coneent,url,meth,yuqi,json,passfail(relust))
     return xiangqing
@@ -148,7 +149,7 @@ def relust(titles,starttime,endtime,passge,fail,id,name,key,coneent,url,meth,yuq
             relus+=(ceshixiangqing(clazz,id[i],name[i],key[i],coneent[i],url[i],meth[i],yuqi[i],json[i],relust[i]))
         text=title(titles)+connent+shouye(starttime,endtime,passge,fail,exceptions,weizhi)+shanghai+relus+weibu
     else:
-        text=title(titles)+connent+shouye(starttime,endtime,passge,fail,exceptions,weizhi)+shanghai+ceshixiangqing(id,name,key,coneent,url,meth,yuqi,json,relust)+weibu
+        text=title(titles)+connent+shouye(starttime,endtime,passge,fail,exceptions,weizhi)+shanghai+ceshixiangqing(relust,id,name,key,coneent,url,meth,yuqi,json,relust)+weibu
     return text
 def createHtml(filepath,titles,starttime,endtime,passge,fail,id,name,key,coneent,url,meth,yuqi,json,relusts,exceptions,weizhi):
     texts=relust(titles,starttime,endtime,passge,fail,id,name,key,coneent,url,meth,yuqi,json,relusts,exceptions,weizhi)

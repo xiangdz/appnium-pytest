@@ -4,7 +4,7 @@ import os
 from testCase.dubbocase import testdubbointerface
 from Public.py_Html import createHtml
 from Public.get_excel import datacel
-from Public.Dingtalk import send_ding
+from Public.beifen.Dingtalk import send_ding
 from config import path
 from config import time
 def start_dubbo_case():
