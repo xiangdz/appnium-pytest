@@ -1,0 +1,5 @@
+[2018-07-17 21:40:16.013009] [INFO] [ddt_case.py] [setUp] [17] 测试用例开始执行
+[2018-07-17 21:40:16.051011] [INFO] [ddt_case.py] [test_api] [27] 读取请求参数：url:http://www.pinkclassy.test.com/user/member/act_ajax_login,key:,canshu:{'securityToken': 'c063c4d327282264257d60163da3a33e';'username': '88@qq.com';'password': '111111';'remember': 1},postorget:POST
+[2018-07-17 21:40:16.320027] [INFO] [ddt_case.py] [test_api] [31] 返回结果:{'code': 0, 'result': {'status': False, 'msg': '* Email address is blank'}}
+[2018-07-17 21:40:16.323027] [INFO] [panduan.py] [assertre] [29] 测试预期值2
+[2018-07-17 21:40:16.325027] [INFO] [ddt_case.py] [tearDown] [19] 测试用例执行完毕

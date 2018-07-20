@@ -1,0 +1,8 @@
+[2018-07-17 21:35:49.763781] [INFO] [test_requests.py] [<module>] [9] 接口请求类型封装
+[2018-07-17 21:35:49.766781] [INFO] [testFengzhuang.py] [<module>] [11] 调用接口去实例化
+[2018-07-17 21:35:49.798783] [INFO] [get_excel.py] [<module>] [11] 表格测试数据读取并转化
+[2018-07-17 21:35:49.803783] [INFO] [panduan.py] [<module>] [8] 测试结果断言1
+[2018-07-17 21:35:49.805783] [INFO] [panduan.py] [<module>] [22] 测试结果断言2
+[2018-07-17 21:35:49.889788] [INFO] [ddt_case.py] [setUp] [17] 测试用例开始执行
+[2018-07-17 21:35:49.956792] [INFO] [ddt_case.py] [test_api] [27] 读取请求参数：url:,key:POST,canshu:http://www.pinkclassy.test.com/user/member/act_ajax_login,postorget:{'securityToken': 'c063c4d327282264257d60163da3a33e';'username': '88@qq.com';'password': '111111';'remember': 1}
+[2018-07-17 21:35:49.959792] [INFO] [ddt_case.py] [tearDown] [19] 测试用例执行完毕

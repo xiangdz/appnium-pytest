@@ -1,0 +1,10 @@
+[2018-07-18 09:26:11.000438] [INFO] [test_requests.py] [<module>] [9] 接口请求类型封装
+[2018-07-18 09:26:11.002438] [INFO] [testFengzhuang.py] [<module>] [11] 调用接口去实例化
+[2018-07-18 09:26:11.022439] [INFO] [get_excel.py] [<module>] [11] 表格测试数据读取并转化
+[2018-07-18 09:26:11.024439] [INFO] [panduan.py] [<module>] [8] 测试结果断言1
+[2018-07-18 09:26:11.026439] [INFO] [panduan.py] [<module>] [22] 测试结果断言2
+[2018-07-18 09:26:11.150447] [INFO] [ddt_case.py] [setUp] [17] 测试用例开始执行
+[2018-07-18 09:26:11.177448] [INFO] [ddt_case.py] [test_api] [27] 读取请求参数：url:http://www.pinkclassy.test.com/user/member/act_ajax_login,key:,canshu:{'securityToken': 'c063c4d327282264257d60163da3a33e';'username': '88@qq.com';'password': '111111';'remember': 1},postorget:POST
+[2018-07-18 09:26:11.430463] [INFO] [ddt_case.py] [test_api] [31] 返回结果:{'code': 0, 'result': {'status': False, 'msg': '* Email address is blank'}}
+[2018-07-18 09:26:11.431463] [INFO] [panduan.py] [assertre] [29] 测试预期值2
+[2018-07-18 09:26:11.433463] [INFO] [ddt_case.py] [tearDown] [19] 测试用例执行完毕

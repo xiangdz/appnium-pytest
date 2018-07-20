@@ -1,0 +1,6 @@
+[2018-07-17 20:22:54.000501] [INFO] [panduan.py] [<module>] [22] 测试结果断言2
+[2018-07-17 20:22:54.009502] [INFO] [case.py] [<module>] [15] 测试数据
+[2018-07-17 20:22:54.106507] [INFO] [test_requests.py] [post] [29] post请求出错原因:No connection adapters were found for '{'securityToken': 'c063c4d327282264257d60163da3a33e';
+'username': '88@qq.com';
+'password': '111111v';
+'remember': 1}'

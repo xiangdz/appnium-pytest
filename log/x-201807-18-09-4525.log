@@ -1,0 +1,2 @@
+[2018-07-18 09:45:25.103449] [INFO] [case.py] [testinterface] [33] 请求:{'securityToken': 'c063c4d327282264257d60163da3a33e';'username': '88@qq.com';'password': '111111';'remember': 1}, url:http://www.pinkclassy.test.com/user/member/act_ajax_login ,返回:{'code': 0, 'result': {'status': False, 'msg': '* Email address is blank'}},预期:{"status":false}
+[2018-07-18 09:45:25.109449] [INFO] [panduan.py] [assert_in] [20] 测试预期值1

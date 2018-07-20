@@ -1,0 +1,17 @@
+[2018-07-17 21:09:43.568199] [INFO] [test_requests.py] [<module>] [9] 接口请求类型封装
+[2018-07-17 21:09:43.574200] [INFO] [testFengzhuang.py] [<module>] [11] 调用接口去实例化
+[2018-07-17 21:09:43.592201] [INFO] [get_excel.py] [<module>] [11] 表格测试数据读取并转化
+[2018-07-17 21:09:43.595201] [INFO] [panduan.py] [<module>] [8] 测试结果断言1
+[2018-07-17 21:09:43.597201] [INFO] [panduan.py] [<module>] [22] 测试结果断言2
+[2018-07-17 21:09:43.675206] [INFO] [ddt_case.py] [setUp] [17] 测试用例开始执行
+[2018-07-17 21:09:43.711208] [INFO] [ddt_case.py] [test_api] [27] 读取请求参数：url:{'securityToken': 'c063c4d327282264257d60163da3a33e';
+'username': '88@qq.com';
+'password': '111111v';
+'remember': 1},key:login,canshu:,postorget:POST
+[2018-07-17 21:09:43.718208] [INFO] [test_requests.py] [post] [29] post请求出错原因:No connection adapters were found for '{'securityToken': 'c063c4d327282264257d60163da3a33e';
+'username': '88@qq.com';
+'password': '111111v';
+'remember': 1}'
+[2018-07-17 21:09:43.720208] [INFO] [ddt_case.py] [test_api] [31] 返回结果:{'code': 1, 'result': "post请求出错原因:No connection adapters were found for '{'securityToken': 'c063c4d327282264257d60163da3a33e';\n'username': '88@qq.com';\n'password': '111111v';\n'remember': 1}'"}
+[2018-07-17 21:09:43.722208] [INFO] [panduan.py] [assertre] [29] 测试预期值2
+[2018-07-17 21:09:43.725208] [INFO] [ddt_case.py] [tearDown] [19] 测试用例执行完毕

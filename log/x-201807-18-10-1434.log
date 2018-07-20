@@ -1,0 +1,8 @@
+[2018-07-18 10:14:34.186491] [INFO] [test_requests.py] [<module>] [7] 接口请求类型封装
+[2018-07-18 10:14:34.194491] [INFO] [testFengzhuang.py] [<module>] [11] 调用接口去实例化
+[2018-07-18 10:14:34.220493] [INFO] [get_excel.py] [<module>] [11] 表格测试数据读取并转化
+[2018-07-18 10:14:34.224493] [INFO] [panduan.py] [<module>] [8] 测试结果断言1
+[2018-07-18 10:14:34.225493] [INFO] [panduan.py] [<module>] [22] 测试结果断言2
+[2018-07-18 10:14:34.227493] [INFO] [case.py] [<module>] [14] 测试数据
+[2018-07-18 10:14:34.609515] [INFO] [case.py] [testinterface] [41] 请求:{'securityToken': 'c063c4d327282264257d60163da3a33e';'username': '88@qq.com';'password': '111111';'remember': 1}, url:http://www.pinkclassy.test.com/user/member/act_ajax_login ,返回:{'code': 0, 'result': {'status': False, 'msg': '* Email address is blank'}},预期:{"status":false}
+[2018-07-18 10:14:34.611515] [INFO] [panduan.py] [assert_in] [20] 测试预期值1

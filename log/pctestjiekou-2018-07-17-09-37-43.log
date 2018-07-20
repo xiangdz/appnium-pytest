@@ -1,0 +1,23 @@
+[2018-07-17 09:37:43.484874] INFO: pctestjiekou: 当前模块 requests封装
+[2018-07-17 09:37:43.486874] INFO: pctestjiekou: 全部args参数参数信息 , ()
+[2018-07-17 09:37:43.487874] INFO: pctestjiekou: 全部kwargs参数信息 , {}
+[2018-07-17 09:37:43.503875] INFO: pctestjiekou: 当前模块 解析测试用例文件
+[2018-07-17 09:37:43.504875] INFO: pctestjiekou: 全部args参数参数信息 , ('E:\\jiekoupython301\\test_case_data\\case.xlsx',)
+[2018-07-17 09:37:43.505875] INFO: pctestjiekou: 全部kwargs参数信息 , {}
+[2018-07-17 09:37:43.530876] INFO: pctestjiekou: 当前模块 解析测试用例文件
+[2018-07-17 09:37:43.531876] INFO: pctestjiekou: 全部args参数参数信息 , ('E:\\jiekoupython301\\test_case_data\\case.xlsx',)
+[2018-07-17 09:37:43.532876] INFO: pctestjiekou: 全部kwargs参数信息 , {}
+[2018-07-17 09:37:43.540877] INFO: pctestjiekou: 当前模块 测试cxq
+[2018-07-17 09:37:43.541877] INFO: pctestjiekou: 全部args参数参数信息 , ()
+[2018-07-17 09:37:43.542877] INFO: pctestjiekou: 全部kwargs参数信息 , {}
+[2018-07-17 09:37:43.543877] INFO: pctestjiekou: 当前模块 解析测试用例文件
+[2018-07-17 09:37:43.544877] INFO: pctestjiekou: 全部args参数参数信息 , ('E:\\jiekoupython301\\test_case_data\\case.xlsx',)
+[2018-07-17 09:37:43.545877] INFO: pctestjiekou: 全部kwargs参数信息 , {}
+[2018-07-17 09:37:43.864895] INFO: pctestjiekou: 参数:{'securityToken': 'c063c4d327282264257d60163da3a33e';
+'username': '88@qq.com';
+'password': '111111v';
+'remember': 1}, url:http://www.pinkclassy.test.com/user/member/act_ajax_login ,返回:{'code': 0, 'result': {'status': False, 'msg': '* Email address is blank'}},预期:{"status":false}
+[2018-07-17 09:37:43.865895] INFO: pctestjiekou: 当前模块 断言测试结果
+[2018-07-17 09:37:43.866895] INFO: pctestjiekou: 全部args参数参数信息 , ()
+[2018-07-17 09:37:43.868896] INFO: pctestjiekou: 全部kwargs参数信息 , {'asserqiwang': '{"status":false}', 'fanhuijson': {'code': 0, 'result': {'status': False, 'msg': '* Email address is blank'}}}
+[2018-07-17 09:37:43.869896] INFO: pctestjiekou: 填写测试预期值
