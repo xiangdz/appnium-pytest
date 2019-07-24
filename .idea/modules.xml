@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/jiekou-python3.iml" filepath="$PROJECT_DIR$/.idea/jiekou-python3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cxq-vue-app.iml" filepath="$PROJECT_DIR$/.idea/cxq-vue-app.iml" />
     </modules>
   </component>
 </project>

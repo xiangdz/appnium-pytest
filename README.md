@@ -1,42 +1,215 @@
-# 接口测试框架（基于json格式、http协议，dubbo协议请求,python3,不兼容python2.x版本） 
-##  java实现版本：https://github.com/liwanlei/java_jiekou
-## 注：现在基于Excel文件管理测试用例基本实现,)
-# 2018-3-13版本修改
-### 原来的测试报告更加详细的展示错误类型，对部分代码进行了优化，断言结果返回更加详细，更快的定位测试问题
-## (目前在部分window上会出现FileNotFoundError [Errno 2] No such file or directory，这个bug是路径过长,解决方案为吧log日志放在当前目录，或者修改动态生成的文件的名字，给了第一种方式，测试日志放在当前目录）
-## qq交流群：194704520  一群   683894834 二群
-### 使用的库 requests，绝大部分是基于Python原有的库进行的，这样简单方便，
-### 使用脚本参数分离等思想，尽可能降低代码的耦合度。
-# 2017-11-1版本修改
-## 引入ddt数据驱动和BSTestRunner，并且测试过程使用python的unittest库，运行可以使用run_new来运行测试，新的运行更加简单，对预期结果进行了自定义，
-## 并且对预期结果的自定义格式进行转换，升级后的接口测试框架提供了两套的运行模式，一套是封装后基于自定义的断言格式的接口测试的框架，比较简单粗糙，但是
-## 定义的报告更加具有代表性，一套是封装好完全基于python库的接口测试。使用起来简单，可以供大家选择，新增加测试用例格式为ddt_case.py的格式。
-# 运行后的测试报告如下
-![Alt text](https://github.com/liwanlei/jiekou-python3/blob/master/img/%E6%96%B0%E7%89%88%E6%9C%AC%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png)
-# log日志
-![Alt text](https://github.com/liwanlei/jiekou-python3/blob/master/img/xinbanbenlog.png)
-#  新增后可以提供两个入口让供你选择，
-## 一：自定义断言方式，自定义测试报告，提供Excel，html格式报告，均为自定义。
-##  二：引用unittest，ddt和BSTestRunner等，让测试用例更加简单明了，代码更加简洁。通俗易懂，且使用更多成熟的框架。
-# ---------------旧版本内容---------
-# 首先我们来看下我们的目录
-##
-![Alt text](https://github.com/liwanlei/jiekou-python3/blob/master/img/xiangmujiegoutu.png)
-##
-### 1.Case文件夹用来存放我们的测试用例相关的，
-### 2.test_case用来存储我们的测试数据，Excel管理测试用例，yaml文件管理测试用例，后续要把yaml管理测试用例的也封装出来。
-### 3.Interface对测试接口相关的封装，包括requests库，发送测试报告的email的封装，从Excel取测试数据的封装
-### 4.Public 展示测试报告相关的脚本，这里可以自己封装，也可以使用现成的，我这里是基于我自己封装的，最后生成的测试报告更加易懂，出错可以尽快排查相关原因
-### 5.report 存放测试报告，
-### 6.run_excel_re.py/run_html.py 主运行文件。运行后可以生成相应的测试报告
-##
-## 产生的html测试报告如下
-![Alt text](https://github.com/liwanlei/jiekou/blob/master/img/cebaogaotu.png)
-##
-### 增加了Excel管理测试报告的功能，目前在继续优化功能，增加了config目录，一些配置文件的目录，
-##
-## 产生的Excel测试报告如下
-![Alt text](https://github.com/liwanlei/jiekou/blob/master/img/excel.png)
-![Alt text](https://github.com/liwanlei/jiekou/blob/master/img/excel2.png)
-### 现在的测试结构更加完整，最新的一次提交增加了log日志的展示，使功能更加完善，log日志在控制台展示如下，对目录进行优化
-![Alt text](https://github.com/liwanlei/jiekou/blob/master/img/log.png)
+### 通知
+
+项目vue+vuex版本已更新版本，只接口图片不加载，不影响初学者学习vue。
+
+### 更新说明
+```
+"vue": "^2.5.2",
+
+"vue-router": "^3.0.1",
+
+"vuex": "^3.1.0"
+
+"webpack": "^4.17.1",
+
+```
+### 前言
+
+这个项目是利用工作之余写的一个模仿微信app的单页面应用，整个项目包含27个页面，涉及实时群聊，机器人聊天，同学录，朋友圈等等，后续页面还是开发中。写这个项目主要目的是练习和熟悉vue和vuex的配合使用，利用socket.io实现实时聊天。
+
+欢迎各路大神Issues
+
+### 技术栈
+
+```
+vue2+vue-router+webpack+vuex+scss+svg构图+es6/7
+
+```
+
+### 项目运行
+
+```
+git clone https://github.com/bailichen/vue-weixin.git
+
+cd vue-weixin
+
+npm install
+
+npm run start (访问本地，运行后访问 http://localhost:10022)
+
+```
+### 效果演示 
+
+[项目演示请点击这里](http://cangdu.org:8003/dialogue) （请用chrome手机模式预览）
+
+
+### 移动端扫描下方二维码
+
+![](https://github.com/bailichen/vue-weixin/raw/master/printscreen/code.png)
+
+### 后台代码在这里
+[后台代码](https://github.com/bailicangdu/node-weixin)
+
+### 说明
+
+> 本项目主要用于熟悉vue2+vuex的用法
+
+> 如有问题请直接在Issues中提出
+
+> 如果觉得对您学习vue有点点帮助，请右上角star一下吧   ^_^
+
+# 目标功能
+
+- [x] 微信 
+- [x] 通讯录
+- [x] 通讯录右边导航功能
+- [x] 发现 
+- [x] 我
+- [x] 设置
+- [x] 新消息提醒
+- [x] 勿扰模式
+- [x] 聊天
+- [x] widows 微信已登录
+- [x] 搜索页
+- [x] 对话页
+- [x] 对话功能
+- [x] 单人机器人智能对话页
+- [x] 群聊
+- [x] 朋友圈
+- [x] 朋友圈点赞、评论
+- [x] 个人中心
+- [x] 详细资料
+- [x] 更多
+- [x] 个人相册
+- [x] 更多
+- [x] 收藏
+- [x] 我的钱包
+- [x] 购物
+- [x] 设置
+- [x] 登录
+
+# 页面部分截图
+
+### 单人聊天、群聊
+
+<img src="https://github.com/bailichen/vue-weixin/raw/master/printscreen/singlechat.gif" width="300" height="530" alt="">  <img src="https://github.com/bailichen/vue-weixin/raw/master/printscreen/groupchat.gif" width="300" height="530" alt="">
+
+
+### 朋友圈
+
+###### 上传图片、点赞
+
+<img src="https://github.com/bailichen/vue-weixin/raw/master/printscreen/shangchuan.gif" width="300" height="530"/> <img src="https://github.com/bailichen/vue-weixin/raw/master/printscreen/like.gif" width="300" height="530"/>
+
+# 项目布局
+
+```
+
+├── README.md                                    // webpack配置文件
+├── build                                        // 项目打包路径
+├── config                                       // 上线项目文件，放在服务器即可正常访问
+│   └── index.js
+├── favicon.ico
+├── index.html
+├── package.json
+├── printscreen
+├── src                                          // 源码目录
+│   ├── App.vue                                  // 页面入口文件
+│   ├── components                               // 公共组件
+│   │   ├── findandMe
+│   │   │   └── findandMe.vue                    // 发现和我共同的模块的列表
+│   │   ├── footer
+│   │   │   └── foot.vue                         // 底部微信导航
+│   │   └── header
+│   │       └── head.vue                         // 头部公共组件
+│   ├── config                                   // 基本配置
+│   │   ├── env.js                               // 环境切换配置
+│   │   ├── fetch.js                             // 获取数据
+│   │   ├── iscroll.js 
+│   │   ├── mUtils.js                            // 工具
+│   │   ├── rem.js                               // px转换rem
+│   │   ├── swiper.min.js                        // 轮播图控件
+│   │   └── uploadPreview.js                     // 上传图片控件
+│   ├── frames
+│   │   ├── addressbook
+│   │   │   ├── addressbook.vue                  // 通讯录
+│   │   │   └── details
+│   │   │       ├── details.vue                  // 详细资料
+│   │   │       └── more
+│   │   │           └── more.vue                 // 更多
+│   │   ├── computer
+│   │   │   └── computer.vue                     // pc端登录
+│   │   ├── conversation
+│   │   │   ├── chatmessage
+│   │   │   │   ├── chatmessage.vue              // 单人聊天信息
+│   │   │   │   └── groupchatmessage.vue         // 群聊聊天信息
+│   │   │   ├── groupchat.vue                    // 群聊
+│   │   │   └── singlechat.vue                   // 单人对话
+│   │   ├── dialogue
+│   │   │   └── dialogue.vue                     // 微信首页(对话列表页)
+│   │   ├── find
+│   │   │   ├── find.vue                         // 发现
+│   │   │   ├── friendcircle
+│   │   │   │   └── friendcircle.vue             // 朋友圈
+│   │   │   └── miniapps
+│   │   │       └── miniapps.vue                 // 小程序子页面
+│   │   ├── me
+│   │   │   ├── cardbag
+│   │   │   │   └── cardbag.vue                  // 卡包
+│   │   │   ├── collect
+│   │   │   │   └── collect.vue                  // 我的收藏
+│   │   │   ├── me.vue
+│   │   │   ├── personaldetails
+│   │   │   │   └── personaldetails.vue          // 个人信息
+│   │   │   ├── photoalbum
+│   │   │   │   └── photoalbum.vue               // 我的相册
+│   │   │   ├── settings
+│   │   │   │   ├── detailset
+│   │   │   │   │   ├── aboutwc.vue              // 关于微信
+│   │   │   │   │   ├── chat.vue                 // 聊天
+│   │   │   │   │   ├── currency.vue             // 通用
+│   │   │   │   │   ├── disturbance.vue          // 勿扰模式
+│   │   │   │   │   ├── help.vue                 // 帮助与反馈
+│   │   │   │   │   ├── login.vue                // 登录
+│   │   │   │   │   ├── newmessage.vue           // 新消息提醒
+│   │   │   │   │   └── privacy.vue              // 隐私
+│   │   │   │   └── settings.vue                 // 设置
+│   │   │   └── wallet
+│   │   │       └── wallet.vue                   // 我的钱包
+│   │   ├── search
+│   │       └── search.vue                       // 搜索     
+│   ├── images
+│   ├── main.js                                  // 程序入口文件，加载各种公共组件
+│   ├── router
+│   │   └── router.js                           // 所有页面路由控制中心
+│   ├── service
+│   │   ├── data
+│   │   │   ├── album.js                        // 个人相册
+│   │   │   ├── burse.js                        // 钱包数据
+│   │   │   ├── chatmore.js
+│   │   │   ├── collect.js                     // 我的收藏
+│   │   │   ├── contacts.js                    // 联系人列表数据
+│   │   │   ├── dialoglist.js                  // 对话列表
+│   │   │   ├── friendcircle.js                // 朋友圈数据
+│   │   │   ├── groupchat.js                   // 群聊数据
+│   │   │   ├── login.js                       // 个人用户信息
+│   │   │   ├── search.js                      // 搜索的分类
+│   │   │   └── userword.js
+│   │   └── getData.js                         // 数据交互统一调配
+│   ├── style
+│   │   ├── public.scss                        // 公共样式
+│   │   └── swiper.min.css
+│   └── vuex                                   // vuex的状态管理
+│       ├── action.js                          // 配置根actions
+│       ├── index.js                           // 引用vuex，创建store
+│       ├── mutation-types.js                  // 定义常量muations名
+│       └── mutation.js                        // 配置根mutations
+└── tree.md
+
+36 directories, 133 files
+
+```
+
+
+
+

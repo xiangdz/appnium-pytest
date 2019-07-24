@@ -1,6 +1,0 @@
-[2018-07-17 17:08:57.150912] INFO: pctestjiekou: 返回结果:{'code': 0, 'result': {'status': False, 'msg': '* Email address is blank'}}
-[2018-07-17 17:08:57.164912] INFO: pctestjiekou: 模块 测试结果断言2
-[2018-07-17 17:08:57.167913] INFO: pctestjiekou: args , ()
-[2018-07-17 17:08:57.183914] INFO: pctestjiekou: kwargs , {'qiwangjson': '{"status":false}'}
-[2018-07-17 17:08:57.187914] INFO: pctestjiekou: 测试预期值2
-[2018-07-17 17:08:57.190914] INFO: pctestjiekou: 测试用例执行完毕
